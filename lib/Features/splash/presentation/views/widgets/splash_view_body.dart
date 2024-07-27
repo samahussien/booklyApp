@@ -1,7 +1,9 @@
+import 'package:bookly/Features/home/presentation/views/home_page.dart';
 import 'package:bookly/Features/splash/presentation/views/widgets/sliding_text.dart';
+import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/assets.dart';
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
 class SplashPageBody extends StatefulWidget {
   const SplashPageBody({super.key});
 
@@ -16,12 +18,11 @@ class _SplashPageBodyState extends State<SplashPageBody>
   @override
   void initState() {
     super.initState();
-    animationController =
-        AnimationController(vsync: this, duration: Duration(seconds: 1));
-    slidingAnimation = Tween(begin: Offset(0, 2), end: Offset(0, 0))
-        .animate(animationController);
-    animationController.forward();
+    initSlidingAnimation();
+    navigateToHome();
   }
+
+
 
   @override
   void dispose() {
@@ -41,5 +42,18 @@ class _SplashPageBodyState extends State<SplashPageBody>
           ),
           slidingText(slidingAnimation: slidingAnimation)
         ]);
+  }
+
+  void initSlidingAnimation() {
+    animationController =
+        AnimationController(vsync: this, duration: Duration(seconds: 1));
+    slidingAnimation = Tween(begin: Offset(0, 2), end: Offset(0, 0))
+        .animate(animationController);
+    animationController.forward();
+  }
+    void navigateToHome() {
+     Future.delayed(kTransitionDuration, () {
+      Get.to(()=>HomePage(),transition: Transition.fade,duration: kTransitionDuration);
+    });
   }
 }
