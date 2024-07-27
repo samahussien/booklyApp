@@ -7,7 +7,7 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //test comment
-    return const  Scaffold(
+    return Scaffold(
       body:  SplashPageBody(),
     );
   }
