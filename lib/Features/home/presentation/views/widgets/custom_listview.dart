@@ -11,8 +11,9 @@ class CustomListView extends StatelessWidget {
       height: MediaQuery.of(context).size.height * 0.3,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
+      
         itemBuilder: (context, index) => const Padding(
-          padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+          padding: EdgeInsets.only(right: kHorizontalPadding),
           child: CustomListItem(),
         ),
         itemCount: 10,
