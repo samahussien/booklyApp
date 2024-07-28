@@ -14,7 +14,7 @@ class HomePageBody extends StatelessWidget {
       padding: EdgeInsets.only(left:kHorizontalPadding ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [CustomAppBar(), CustomListView(),SizedBox(height: 10,),Text("Best Seller",style: Styles.titileMeduim,)],
+        children: [CustomAppBar(), CustomListView(),SizedBox(height: 30,),Text("Best Seller",style: Styles.titileMeduim,)],
       ),
     );
   }
