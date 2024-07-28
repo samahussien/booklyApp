@@ -4,6 +4,7 @@ import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 class SplashPageBody extends StatefulWidget {
   const SplashPageBody({super.key});
 
@@ -22,8 +23,6 @@ class _SplashPageBodyState extends State<SplashPageBody>
     navigateToHome();
   }
 
-
-
   @override
   void dispose() {
     super.dispose();
@@ -40,20 +39,22 @@ class _SplashPageBodyState extends State<SplashPageBody>
           const SizedBox(
             height: 4,
           ),
-          slidingText(slidingAnimation: slidingAnimation)
+          SlidingText(slidingAnimation: slidingAnimation)
         ]);
   }
 
   void initSlidingAnimation() {
     animationController =
-        AnimationController(vsync: this, duration: Duration(seconds: 1));
-    slidingAnimation = Tween(begin: Offset(0, 2), end: Offset(0, 0))
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
+    slidingAnimation = Tween(begin: const Offset(0, 2), end: const Offset(0, 0))
         .animate(animationController);
     animationController.forward();
   }
-    void navigateToHome() {
-     Future.delayed(kTransitionDuration, () {
-      Get.to(()=>HomePage(),transition: Transition.fade,duration: kTransitionDuration);
+
+  void navigateToHome() {
+    Future.delayed(kTransitionDuration, () {
+      Get.to(() => const HomePage(),
+          transition: Transition.fade, duration: kTransitionDuration);
     });
   }
 }
