@@ -6,13 +6,14 @@ import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
+class BookListViewItem extends StatelessWidget {
+  const BookListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => GoRouter.of(context).push(AppRouterPaths.bookDetailsViewPath),
+      onTap: () =>
+          GoRouter.of(context).push(AppRouterPaths.bookDetailsViewPath),
       child: SizedBox(
         height: 125,
         child: Row(
@@ -38,7 +39,8 @@ class BestSellerListViewItem extends StatelessWidget {
                     child: Text("Harry Potter and the goblet of fire",
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
-                        style: Styles.textStyle20.copyWith(fontFamily: kGTSectra)),
+                        style:
+                            Styles.textStyle20.copyWith(fontFamily: kGTSectra)),
                   ),
                   const SizedBox(
                     height: 3,
@@ -52,8 +54,8 @@ class BestSellerListViewItem extends StatelessWidget {
                       Text("19.99 €",
                           style: Styles.textStyle20
                               .copyWith(fontWeight: FontWeight.bold)),
-                              const Spacer(),
-                               const BookRating()
+                      const Spacer(),
+                      const BookRating()
                     ],
                   )
                 ],
