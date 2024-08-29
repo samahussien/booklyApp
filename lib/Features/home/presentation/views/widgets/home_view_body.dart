@@ -1,5 +1,5 @@
 import 'package:bookly/Features/home/presentation/views/widgets/best_seller_listview.dart';
-import 'package:bookly/Features/home/presentation/views/widgets/custom_appbar.dart';
+import 'package:bookly/Features/home/presentation/views/widgets/custom_home_appbar.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_listview.dart';
 import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/styles.dart';
@@ -17,17 +17,15 @@ class HomeViewBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: kHorizontalPadding),
-                child: CustomAppBar(),
+                padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+                child: CustomHomeAppbar(),
               ),
               CustomListView(),
               SizedBox(
                 height: 30,
               ),
               Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+                padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
                 child: Text(
                   "Best Seller",
                   style: Styles.textStyle18,
