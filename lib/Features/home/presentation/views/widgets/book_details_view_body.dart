@@ -1,3 +1,4 @@
+import 'package:bookly/Features/home/presentation/views/widgets/book_actions.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/book_rating.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:bookly/Features/home/presentation/views/widgets/custom_details_app_bar.dart';
@@ -24,9 +25,13 @@ class BookDetailsViewBody extends StatelessWidget {
         Text("The Jungle Book",style: Styles.textStyle30.copyWith(fontWeight: FontWeight.bold),),
         const SizedBox(height: 6,),
         Opacity(opacity: 0.70,child: Text("Rudyard Kipling",style: Styles.textStyle18.copyWith(fontWeight: FontWeight.w500,fontStyle: FontStyle.italic),)),
-        const BookRating(mainAxisAlignment: MainAxisAlignment.center,)
+        const BookRating(mainAxisAlignment: MainAxisAlignment.center,),
+        const SizedBox(height: 37,),
+        const BooksAction()
         ],
       ),
     );
   }
 }
+
+
