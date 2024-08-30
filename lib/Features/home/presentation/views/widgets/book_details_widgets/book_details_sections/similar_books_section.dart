@@ -10,15 +10,14 @@ class SimilarBooksSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-            Text(
-              "You can also like",
-              style: Styles.textStyle16
-                  .copyWith(fontWeight: FontWeight.w600),
-            ),
-                  const SizedBox(
-                    height: 16,
-                  ),
-                  const SimilarBooksListView()
+        Text(
+          "You can also like",
+          style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w600),
+        ),
+        const SizedBox(
+          height: 16,
+        ),
+        const SimilarBooksListView()
       ],
     );
   }

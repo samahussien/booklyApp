@@ -22,7 +22,7 @@ class BookDetailsViewBody extends StatelessWidget {
                       child: SizedBox(
                     height: 10,
                   )),
-              SimilarBooksSection()
+                  SimilarBooksSection()
                 ],
               ),
             ))
@@ -30,4 +30,3 @@ class BookDetailsViewBody extends StatelessWidget {
     );
   }
 }
-

@@ -12,15 +12,15 @@ abstract class AppRouter {
         builder: (context, state) => const SplashView(),
       ),
       GoRoute(
-        path:AppRouterPaths.homeViewPath,
+        path: AppRouterPaths.homeViewPath,
         builder: (context, state) => const HomeView(),
       ),
-       GoRoute(
-        path:AppRouterPaths.bookDetailsViewPath,
+      GoRoute(
+        path: AppRouterPaths.bookDetailsViewPath,
         builder: (context, state) => const BookDetailsView(),
       ),
-             GoRoute(
-        path:AppRouterPaths.searchViewPath,
+      GoRoute(
+        path: AppRouterPaths.searchViewPath,
         builder: (context, state) => const SearchView(),
       ),
     ],
@@ -28,7 +28,7 @@ abstract class AppRouter {
 }
 
 abstract class AppRouterPaths {
- static String homeViewPath = "/homeView";
- static String bookDetailsViewPath = "/bookDetailsView";
- static String searchViewPath = "/searchView";
+  static String homeViewPath = "/homeView";
+  static String bookDetailsViewPath = "/bookDetailsView";
+  static String searchViewPath = "/searchView";
 }

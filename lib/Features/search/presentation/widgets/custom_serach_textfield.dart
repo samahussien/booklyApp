@@ -22,6 +22,8 @@ class CustomSerachTextfield extends StatelessWidget {
           )),
     );
   }
-  OutlineInputBorder buildOutlineBorder() => OutlineInputBorder(borderSide: const BorderSide(color: Colors.white),borderRadius: BorderRadius.circular(12));
 
+  OutlineInputBorder buildOutlineBorder() => OutlineInputBorder(
+      borderSide: const BorderSide(color: Colors.white),
+      borderRadius: BorderRadius.circular(12));
 }
