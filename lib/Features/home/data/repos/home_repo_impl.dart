@@ -1,3 +1,4 @@
+import 'dart:developer';
 
 import 'package:bookly/Features/home/data/models/book_model/book_model.dart';
 import 'package:bookly/Features/home/data/repos/home_repo.dart';
@@ -18,9 +19,10 @@ class HomeRepoImpl implements HomeRepo {
           endPoint:
               "volumes?Filtering=free-ebooks&Sorting=newest &q=subject:programming");
       List<BookModel> books = [];
-      for (var item in data["item"]) {
+      for (var item in data["items"]) {
         books.add(BookModel.fromJson(item));
       }
+      log("books is ${books.length}");
       return right(books);
     } catch (e) {
       if (e is DioException) return left(ServerFailure.fromDioError(e));

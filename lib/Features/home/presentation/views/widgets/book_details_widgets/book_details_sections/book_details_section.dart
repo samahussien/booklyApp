@@ -38,6 +38,8 @@ class BookDetailsSection extends StatelessWidget {
                   fontWeight: FontWeight.w500, fontStyle: FontStyle.italic),
             )),
         const BookRating(
+          rating: 0,
+          count: 10,
           mainAxisAlignment: MainAxisAlignment.center,
         ),
         const SizedBox(
