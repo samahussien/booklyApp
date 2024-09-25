@@ -4,6 +4,7 @@ import 'package:bookly/Features/home/presentation/views/widgets/custom_book_item
 import 'package:bookly/core/widgets/custom_error_widget.dart';
 import 'package:bookly/core/widgets/custom_loading_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SimilarBooksListView extends StatelessWidget {
@@ -18,13 +19,14 @@ class SimilarBooksListView extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.15,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) => const Padding(
-                padding: EdgeInsets.only(right: 15),
+              itemBuilder: (context, index) => Padding(
+                padding: const EdgeInsets.only(right: 15),
                 child: CustomBookItem(
                     imageUrl:
-                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdM3qhUKN58oFzVV-zLEnLFZ6WsS5k6chlqw&s"),
+                        state.books[index].volumeInfo.imageLinks?.thumbnail ??
+                            ""),
               ),
-              itemCount: 10,
+              itemCount: state.books.length,
             ),
           );
         } else if (state is SimilarBookFailureState) {
